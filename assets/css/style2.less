@@ -1,0 +1,71 @@
+#hero-wrapper {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: hidden; /* Asegura que las imágenes no se desborden */
+}
+
+#hero-wrapper .carousel-wrapper,
+#hero-carousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita que las imágenes excedan los límites */
+}
+
+#hero-carousel {
+    img {
+        position: relative;
+        object-fit: cover; /* Ajusta la proporción sin distorsionar */
+        max-width: 50%; /* Restringe el ancho máximo */
+        max-height: 50%; /* Restringe el alto máximo */
+        width: auto; /* Ajusta automáticamente basado en el contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+        margin: auto; /* Centra las imágenes */
+    }
+}
+
+.carousel-fade {
+
+    .carousel-inner {
+        .item {
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 0.5s; /* Mejora la transición */
+        }
+
+        .active {
+            opacity: 1;
+            transition-duration: 0.5s;
+        }
+
+        .active.left,
+        .active.right {
+            left: 0;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+
+    img {
+        position: relative;
+        object-fit: cover; /* Ajusta la proporción sin distorsionar */
+        max-width: 50%; /* Restringe el ancho máximo */
+        max-height: 50%; /* Restringe el alto máximo */
+        width: auto; /* Ajusta automáticamente basado en el contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+        margin: auto; /* Centra las imágenes */
+    }
+}
